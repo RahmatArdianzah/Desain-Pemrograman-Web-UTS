@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Rahmat Ardianzah MI-1F
+        </title>
+        <link rel="stylesheet" type="text/css" href="web.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--Bagian Header-->
+        <header>
+            <a href="tugas_uts.html" class="logo"><i class="fas fa-utensils"></i>warteg's</a>
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="daftar.php">Biodata</a>
+                <a href="#gallery">Profil</a>
+                <a href="#pemesanan">Pesanan</a>
+            </nav>
+        </header>
+        <!--Bagian landing page-->
+        <section class="home" id="home">
+            <div class="image">
+                <img src="img/ghome.png" alt="">
+            </div>
+            <div class="content">
+                <h3>Hai, Selamat datang</h3>
+                <p>
+                    warteg's menawarkan berbagai macam menu masakan rumahan.
+                    Kamu dapat memilih beberapa paket dan bertransaksi dengan mudah di dalam menu transaksi!
+                    Tunggu apa lagi? Yuk segera pesan!
+                </p>
+                <a href="#pemesanan" class="btn">pesan sekarang</a>
+            </div>
+        </section>
+        <!--Bagian Menu-->
+        <section class="gallery" id="gallery">
+            <h1>Profil <a class="logo-menu"><i class="fas fa-utensils"></i>warteg's</a></h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="img/gambar2.jpg" alt="">
+                    <div class="content">
+                        <h3>PAKET 1</h3>
+                        <p>nasi padang free es teh <br>Rp. 22.000</p>
+                        <!--<a href="#" class="btn">order now</a>-->
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/gambar3.jpg" alt="">
+                    <div class="content">
+                        <h3>PAKET 2</h3>
+                        <p>nasi lalapan ayam free es teh <br>Rp. 20.000</p>
+                        <!--<a href="#" class="btn">order now</a>-->
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/gambar4.jpeg" alt="">
+                    <div class="content">
+                        <h3>PAKET 3</h3>
+                        <p>nasi lalapan lele free es teh <br>Rp. 18.000</p>
+                        <!--<a href="#" class="btn">order now</a>-->
+                    </div>
+                </div>
+                <br><br><br>
+                <br><br>
+            </div>
+            <div class="profil-warteg">
+                <p>
+                    Warteg adalah singkatan dari dua kata yang digabung yakni warung dan Tegal. Menurut KBBI,
+                    warung biasanya merujuk pada suatu tempat yang tidak terlalu besar, tempat orang menjajakan sesuatu,
+                    bisa itu makanan, minuman, kelontong, dan sebagainya. <br>
+                    Di Warteg ini masih dalam tahap pembukaan dan terbilang baru, menu yang kami sediakan adalah berupa nasi padang, nasi lalapan ayam dan lele. 
+                    Warung ini di dirikan pada tahun 2022 dan beralamat di JL. Dinoyo Sekolahan IV/6AI, SURABAYA
+                    <br><br>
+                    <hr size="5" width="100%" color="#ce6161">
+                </p>
+            </div>
+        </section>
+        <br>
+        <!--Pemesanan-->
+        <div class="container-pesan">
+            <section id="pemesanan">
+                <div class="pemesanan-form be-primary p-2">
+                    <h1 class="m-heading">pemesanan.</h1>
+                    <form class="form" action="pemesanan.php" method="post">
+                        <label class="teks" >Nama </label>
+                        <input class="inputan" type="text" name="nama" placeholder="Nama"><br><br>
+                        <label class="teks">Status Pembeli </label>
+                        <select class="inputan" name="status">
+                            <option value="Member">Member</option>
+                            <option value="Non-member">Non-Member</option>
+                        </select><br><br>
+                        <label class="teks">Paket Menu </label>
+                        <select class="inputan" name="menu">
+                            <option value="paket1">Paket 1</option>
+                            <option value="paket2">Paket 2</option>
+                            <option value="paket3">Paket 3</option>
+                        </select><br><br>
+                        <label class="teks">Jumlah </label>
+                        <input class="inputan" type="number" name="jumlah" placeholder="Jumlah"><br><br><br>
+
+                        <input class="kirim" type="submit" name="hitung" value="Checkout"><br><br>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <h4>copyright &copy UTS RAHMAT ARDIANZAH</h4>
+        </div>
+        <script src="script.js">
+
+        </script>
+    </body>
+</html>

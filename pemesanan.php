@@ -8,7 +8,47 @@
         </title>
         <link rel="stylesheet" type="text/css" href="web.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <link rel="stylesheet" href="">
+        <!--<style>
+            #parentpopup {
+                background: rgba( 255, 255, 255, 0.4 );
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                backdrop-filter: blur( 9.5px );
+                -webkit-backdrop-filter: blur( 9.5px );
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
+                position : absolute;
+                top: 0;
+                left : 0;
+                right :0;
+                bottom :0;
+
+                width : 300px;
+                height :200px;
+                margin :auto;
+            }
+            .popupkecil {
+                text-align :center;
+                font-weight : bolder;
+                text-transform : uppercase;
+                font-size : 2rem;
+                margin-top : 35px;
+            }
+            .closepopup {
+                background-color : #f17373;
+                color : #fff;
+                position : absolute;
+                right : 0;
+                width : 30px;
+                text-align : center;
+            }
+        </style>
+        <script>
+            function tutuppopup(){
+                document.getElementById('parentpopup').style.display = "none";
+            }
+            function bukapopup(){
+                document.getElementById('parentpopup').style.display = "inline";
+            }
+        </script>-->
     </head>
     <body class="tampil">
         <!--Bagian Header-->
@@ -161,7 +201,18 @@
                     ?>
                 <br>
                 <a href="tugas_uts.html" class="bayar">Bayar </a>
+                <!--<a href="tugas_uts.html" class="bayar">Bayar </a>
+                <input type="button" value='bayar' onclick='bukapopup();'>-->
             </div>
+            <!--<div id='parentpopup'>
+                <div class='closepopup'>
+                    <a href='#' onclick='tutuppopup();'>X</a> 
+                </div>
+                <div class='popupkecil'>
+                    yakin ingin bayar ? <br>
+                    <a href="tugas_uts.html"> iya </a>
+                </div>
+            </div>-->
         </div>
     </body>
 </html>

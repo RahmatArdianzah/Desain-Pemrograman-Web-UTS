@@ -172,7 +172,7 @@ input{
 }
 .gallery h1 .logo-menu i{
     padding-right: .5rem;
-    color: #ce6161;
+    color: hwb(0 45% 5%);
     margin-left: 10px;
 }
 .gallery .box-container{

@@ -8,47 +8,6 @@
         </title>
         <link rel="stylesheet" type="text/css" href="web.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <!--<style>
-            #parentpopup {
-                background: rgba( 255, 255, 255, 0.4 );
-                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                backdrop-filter: blur( 9.5px );
-                -webkit-backdrop-filter: blur( 9.5px );
-                border: 1px solid rgba( 255, 255, 255, 0.18 );
-                position : absolute;
-                top: 0;
-                left : 0;
-                right :0;
-                bottom :0;
-
-                width : 300px;
-                height :200px;
-                margin :auto;
-            }
-            .popupkecil {
-                text-align :center;
-                font-weight : bolder;
-                text-transform : uppercase;
-                font-size : 2rem;
-                margin-top : 35px;
-            }
-            .closepopup {
-                background-color : #f17373;
-                color : #fff;
-                position : absolute;
-                right : 0;
-                width : 30px;
-                text-align : center;
-            }
-        </style>
-        <script>
-            function tutuppopup(){
-                document.getElementById('parentpopup').style.display = "none";
-            }
-            function bukapopup(){
-                document.getElementById('parentpopup').style.display = "inline";
-            }
-        </script>-->
     </head>
     <body class="tampil">
         <!--Bagian Header-->
@@ -77,7 +36,6 @@
                             $jumlahDiskon="";
                             $total="";
                         }
-
                         if($status == "Member") {
                             if($menu == "paket1") {
                                 if($jumlah == 1) {
@@ -184,6 +142,120 @@
                                     $total = $jumlahTransaksi - $jumlahDiskon;
                                 }
                             }
+                        }
+                        switch ($status == "Non-member") {
+                            case ("paket1") :
+                                if($jumlah == 3) {
+                                    $diskon = 0.05 * 60000;
+                                    $harga = 60000 - $diskon; 
+                                    $jumlahTransaksi = 22000 * $jumlah;
+                                    $jumlahDiskon = $diskon * $jumlah; 
+                                    $total = $jumlahTransaksi - $jumlahDiskon; 
+                                } else if($jumlah == 4) {
+                                    $diskon = 0.05 * 60000;
+                                    $harga = 60000 - $diskon; 
+                                    $jumlahTransaksi = 22000 * $jumlah;
+                                    $jumlahDiskon = $diskon * $jumlah; 
+                                    $total = $jumlahTransaksi - $jumlahDiskon;
+                                }else if($jumlah == 5) {
+                                    $diskon = 0.05 * 60000;
+                                    $harga = 60000 - $diskon; 
+                                    $jumlahTransaksi = 22000 * $jumlah;
+                                    $jumlahDiskon = $diskon * $jumlah; 
+                                    $total = $jumlahTransaksi - $jumlahDiskon;
+                                } else if ($jumlah == 6 || $jumlah > 6) {
+                                    $diskon = 0.05 * 22000;
+                                    $harga = 22000 - $diskon; 
+                                    $jumlahTransaksi = 22000 * $jumlah;
+                                    $jumlahDiskon = $diskon * $jumlah; 
+                                    $total = $jumlahTransaksi - $jumlahDiskon;  
+                                }else if($jumlah > 10) {
+                                    $diskon = 0.05 * 22000;
+                                    $harga = 22000 - $diskon; 
+                                    $jumlahTransaksi = 22000 * $jumlah;
+                                    $jumlahDiskon = $diskon * $jumlah; 
+                                    $total = $jumlahTransaksi - $jumlahDiskon;  
+                                }else {
+                                    $jumlahTransaksi = 22000 * $jumlah; 
+                                    $jumlahDiskon = $jumlahTransaksi * 0;
+                                    $total = $jumlahTransaksi - $jumlahDiskon;
+                                }
+                                break;
+
+                                case ("paket2") :
+                                    if($jumlah == 3) {
+                                        $diskon = 0.05 * 60000;
+                                        $harga = 60000 - $diskon; 
+                                        $jumlahTransaksi = 20000 * $jumlah;
+                                        $jumlahDiskon = $diskon * $jumlah; 
+                                        $total = $jumlahTransaksi - $jumlahDiskon; 
+                                    }else if($jumlah == 4) {
+                                        $diskon = 0.05 * 60000;
+                                        $harga = 60000 - $diskon; 
+                                        $jumlahTransaksi = 20000 * $jumlah;
+                                        $jumlahDiskon = $diskon * $jumlah; 
+                                        $total = $jumlahTransaksi - $jumlahDiskon;
+                                    }else if($jumlah == 5) {
+                                        $diskon = 0.05 * 60000;
+                                        $harga = 60000 - $diskon; 
+                                        $jumlahTransaksi = 20000 * $jumlah;
+                                        $jumlahDiskon = $diskon * $jumlah; 
+                                        $total = $jumlahTransaksi - $jumlahDiskon;
+                                    } else  if ($jumlah == 6 || $jumlah > 6){
+                                        $diskon = 0.05 * 20000;
+                                        $harga = 20000 - $diskon; 
+                                        $jumlahTransaksi = 20000 * $jumlah;
+                                        $jumlahDiskon = $diskon * $jumlah; 
+                                        $total = $jumlahTransaksi - $jumlahDiskon; 
+                                    }else if($jumlah > 10) {
+                                        $diskon = 0.05 * 20000;
+                                        $harga = 20000 - $diskon; 
+                                        $jumlahTransaksi = 20000 * $jumlah;
+                                        $jumlahDiskon = $diskon * $jumlah; 
+                                        $total = $jumlahTransaksi - $jumlahDiskon; 
+                                    }else {
+                                        $jumlahTransaksi = 20000 * $jumlah; 
+                                        $jumlahDiskon = $jumlahTransaksi * 0;
+                                        $total = $jumlahTransaksi - $jumlahDiskon;
+                                    }
+                                    break;
+                                    case ("paket3") :
+                                        if($jumlah == 3) {
+                                            $diskon = 0.05 * 60000;
+                                            $harga = 60000 - $diskon; 
+                                            $jumlahTransaksi = 18000 * $jumlah;
+                                            $jumlahDiskon = $diskon * $jumlah; 
+                                            $total = $jumlahTransaksi - $jumlahDiskon; 
+                                        }else if($jumlah == 4) {
+                                            $diskon = 0.05 * 60000;
+                                            $harga = 60000 - $diskon; 
+                                            $jumlahTransaksi = 18000 * $jumlah;
+                                            $jumlahDiskon = $diskon * $jumlah; 
+                                            $total = $jumlahTransaksi - $jumlahDiskon;
+                                        }else if($jumlah == 5) {
+                                            $diskon = 0.05 * 60000;
+                                            $harga = 60000 - $diskon; 
+                                            $jumlahTransaksi = 18000 * $jumlah;
+                                            $jumlahDiskon = $diskon * $jumlah; 
+                                            $total = $jumlahTransaksi - $jumlahDiskon;
+                                        } else if ($jumlah == 6 || $jumlah > 6){
+                                            $diskon = 0.05 * 18000;
+                                            $harga = 18000 - $diskon; 
+                                            $jumlahTransaksi = 18000 * $jumlah;
+                                            $jumlahDiskon = $diskon * $jumlah; 
+                                            $total = $jumlahTransaksi - $jumlahDiskon;  
+                                        }else if($jumlah > 10) {
+                                            $diskon = 0.05 * 18000;
+                                            $harga = 18000 - $diskon; 
+                                            $jumlahTransaksi = 18000 * $jumlah;
+                                            $jumlahDiskon = $diskon * $jumlah; 
+                                            $total = $jumlahTransaksi - $jumlahDiskon;
+                                        }else {
+                                                $jumlahTransaksi = 18000 * $jumlah; 
+                                                $jumlahDiskon = $jumlahTransaksi * 0;
+                                                $total = $jumlahTransaksi - $jumlahDiskon;
+                                        }
+                                        break;
                         }
                         echo "Nama Pembeli        : " .$nama;
                         echo "<br>";
